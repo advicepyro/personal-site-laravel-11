@@ -1,0 +1,32 @@
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+@import '~font-awesome/scss/font-awesome';
+
+/*.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}*/
+
+// Theme
+@import 'freelancer';
+
+// Some extras...
+.portfolio-modal {
+    ul {
+        text-align: left;
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+.portfolio {
+    background-color: $white;
+}
