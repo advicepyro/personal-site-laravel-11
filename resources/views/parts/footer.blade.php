@@ -33,7 +33,7 @@
             <div class="col-md-4">
                 <h4 class="text-uppercase mb-4">Credits</h4>
                 <p class="lead mb-0">This site uses the
-                    <a href="https://startbootstrap.com/template-overviews/freelancer/">Freelancer</a> template.<br/>Proudly hosted on a Raspberry Pi 4.</p>
+                    <a href="https://startbootstrap.com/template-overviews/freelancer/">Freelancer</a> template.<br/>Built as a <a href="https://laravel.com/docs/11.x">Laravel</a> application.</p>
             </div>
         </div>
     </div>

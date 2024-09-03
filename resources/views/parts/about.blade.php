@@ -9,7 +9,7 @@
                 <p class="lead">Based out of Toronto, ON. Did a degree in computer science at the University of Toronto and have been developing professionally since the fall of 2014.</p>
             </div>
             <div class="col-lg-4 mr-auto">
-                <p class="lead">This site was built to quickly demonstrate some of the Laravel-ness that has consumed me between 2015-2018. It is also an example of a Docker application I have deployed on my Raspberry Pi 4!</p>
+                <p class="lead">This site was built to quickly demonstrate some of the Laravel-ness that consumed me between 2015-2018. It is also an example of a Docker application I have deployed on my Raspberry Pi 4!</p>
             </div>
         </div>
         <div class="text-center mt-4">
