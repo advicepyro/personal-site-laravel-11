@@ -7,6 +7,12 @@ This project was a migration of my previous [Laravel project](https://github.com
 
 Requires PHP 8.x, and any dependencies of Laravel listed [here](https://laravel.com/docs/master#installation). 
 
+## Installation
+
+- Install assets with `npm install`
+- Invoke Laravel Mix with `npx mix --production`
+- Then bring up the containers with `docker compose -f docker-compose-site.yml up -d --build`
+
 ## Docker Compose files
 
 The default `docker-compose.yml` is for Laravel Sail. `docker-compose-site.yml` is to get the application up and running in production.
