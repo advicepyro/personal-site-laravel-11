@@ -11,6 +11,10 @@ COPY --from=node /usr/local/bin/node /usr/local/bin/node
 RUN ln -s /usr/local/lib/node_modules/npm/bin/npm-cli.js /usr/local/bin/npm
 RUN ln -s /usr/local/lib/node_modules/npm/bin/npx-cli.js /usr/local/bin/npx
 
+# This might be needed for things like psysh (tinker)
+RUN mkdir /.config
+RUN chown nobody:nobody /.config
+
 # Back to non-priv user for the rest...
 
 USER nobody
