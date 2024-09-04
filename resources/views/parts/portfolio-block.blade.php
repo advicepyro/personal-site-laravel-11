@@ -1,6 +1,6 @@
 {{--This contains the portfolio image, and its corresponding hidden div.--}}
 
-<div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-3">
     <a class="portfolio-item d-block mx-auto" href="#{{ $portfolioBlockId }}">
         <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
             <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">

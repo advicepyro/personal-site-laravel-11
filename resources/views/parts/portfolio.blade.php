@@ -8,6 +8,7 @@
             @include('parts.portfolio.clausehound', ['portfolioBlockId' => 'portfolio-ch', 'portfolioImageName' => 'clausehound'])
             @include('parts.portfolio.strength', ['portfolioBlockId' => 'portfolio-str', 'portfolioImageName' => 'strength'])
             @include('parts.portfolio.blockmaintain', ['portfolioBlockId' => 'portfolio-bm', 'portfolioImageName' => 'blockmaintain'])
+            @include('parts.portfolio.mercatus', ['portfolioBlockId' => 'portfolio-mct', 'portfolioImageName' => 'mercatus'])
             {{--@include('parts.portfolio-block', ['portfolioBlockId' => 'portfolio-third'])--}}
         </div>
     </div>

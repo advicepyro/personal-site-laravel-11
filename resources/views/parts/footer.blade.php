@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-4 mb-5 mb-lg-0">
                 <h4 class="text-uppercase mb-4">Get In Touch</h4>
-                <p class="lead mb-0">Feel free to drop a line at:<br/><code>hello at deniswong dot ca</code></p>
+                <p class="lead mb-0">Feel free to drop me a line at:<br/><code>hello [at] deniswong [dot] ca</code></p>
             </div>
             <div class="col-md-4 mb-5 mb-lg-0">
                 <h4 class="text-uppercase mb-4">My Profiles</h4>
@@ -14,7 +14,7 @@
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a title='Threads' target="_blank" class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.instagram.com/advicepyro">
+                        <a title='Instagram' target="_blank" class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.instagram.com/advicepyro">
                             <i class="fa fa-fw fa-instagram"></i>
                         </a>
                     </li>
@@ -33,7 +33,7 @@
             <div class="col-md-4">
                 <h4 class="text-uppercase mb-4">Credits</h4>
                 <p class="lead mb-0">This site uses the
-                    <a href="https://startbootstrap.com/template-overviews/freelancer/">Freelancer</a> template.<br/>Built as a <a href="https://laravel.com/docs/11.x">Laravel</a> application.</p>
+                    <a title='Freelancer' target='_blank' href="https://startbootstrap.com/template-overviews/freelancer/">Freelancer</a> template.<br/>Built as a <a title='Documentation for Laravel 11.x' target="_blank" href="https://laravel.com/docs/11.x">Laravel</a> application.</p>
             </div>
         </div>
     </div>
