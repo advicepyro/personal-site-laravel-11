@@ -9,14 +9,6 @@ Requires PHP 8.x, and any dependencies of Laravel listed [here](https://laravel.
 
 ## Installation
 
-### For production
 - Bring up the application with `docker compose up -d --build`
 - Enter container's shell with `docker compose exec site sh`
-- You should be in `/var/www/html`. Follow remaining steps below
-
-### Test locally with Sail
-- (to be determined)
-
-### Post-install
-
-Bring up the app as you would for any Laravel app. Make a copy of `.env.example` to `.env`, regenerate a key with `php artisan generate:key`, then `php artisan migrate`.
+- Bring up the app as you would for any Laravel app. Make a copy of `.env.example` to `.env`, regenerate a key with `php artisan key:generate`, then `php artisan migrate`.
