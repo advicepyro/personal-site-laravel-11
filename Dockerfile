@@ -3,8 +3,9 @@ FROM trafex/php-nginx:3.6.0 AS php-nginx
 
 USER root
 
-# PDO is needed by Laravel. In addition, we need shadow for usermod later on
-RUN apk add --no-cache php83-pdo php83-pdo_sqlite shadow
+# PDO is needed by Laravel. In addition, we need shadow for usermod later on,
+# plus nano since I suck at text editors
+RUN apk add --no-cache php83-pdo php83-pdo_sqlite shadow nano
 
 # Install composer and node
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
