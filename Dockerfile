@@ -3,28 +3,29 @@ FROM trafex/php-nginx:3.6.0 AS php-nginx
 
 USER root
 
-# Dependencies: composer, node, PDO needed
-RUN apk add --no-cache php83-pdo php83-pdo_sqlite
+# PDO is needed by Laravel. In addition, we need shadow for usermod later on
+RUN apk add --no-cache php83-pdo php83-pdo_sqlite shadow
+
+# Install composer and node
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 COPY --from=node /usr/local/lib/node_modules /usr/local/lib/node_modules
 COPY --from=node /usr/local/bin/node /usr/local/bin/node
 RUN ln -s /usr/local/lib/node_modules/npm/bin/npm-cli.js /usr/local/bin/npm
 RUN ln -s /usr/local/lib/node_modules/npm/bin/npx-cli.js /usr/local/bin/npx
 
-# This might be needed for things like psysh (tinker)
-RUN mkdir /.config
-RUN chown nobody:nobody /.config
+# Create a home directory for nobody - by default it is / which breaks
+# anything that expects a writable home directory, especially npm
+RUN mkdir /home/nobody
+RUN chown nobody:nobody /home/nobody
+RUN usermod -d /home/nobody nobody
 
 # Back to non-priv user for the rest...
-
 USER nobody
-
 COPY --chown=nobody:nobody --chmod=644 container-configs/conf.d /etc/nginx/conf.d
 
 # Compile site assets
-COPY --chown=nobody:nobody laravel-app /var/www/html
-WORKDIR /var/www/html
-RUN chmod 644 /var/www/html
+COPY --chown=nobody:nobody laravel-app /home/nobody/site
+WORKDIR /home/nobody/site
 RUN composer install --no-dev
 RUN npm install
 RUN npx mix --production
