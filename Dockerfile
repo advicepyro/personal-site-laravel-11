@@ -24,6 +24,7 @@ COPY --chown=nobody:nobody --chmod=644 container-configs/conf.d /etc/nginx/conf.
 # Compile site assets
 COPY --chown=nobody:nobody laravel-app /var/www/html
 WORKDIR /var/www/html
+RUN chmod 644 /var/www/html
 RUN composer install --no-dev
 RUN npm install
 RUN npx mix --production
