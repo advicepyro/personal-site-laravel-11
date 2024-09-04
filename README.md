@@ -9,10 +9,12 @@ Requires PHP 8.x, and any dependencies of Laravel listed [here](https://laravel.
 
 ## Installation
 
-- Install assets with `npm install`
-- Invoke Laravel Mix with `npx mix --production`
-- Then bring up the containers with `docker compose -f docker-compose-site.yml up -d --build`
+Prior to running either run option below, first make a copy of `laravel-app/.env.example` to `laravel-app/.env`.
 
-## Docker Compose files
+### For production
+- Bring up the application with `docker compose up -d --build`
+- Enter container's shell with `docker compose exec site sh`
+- You should be in `/var/www/html`. Use `php artisan key:generate` if required
 
-The default `docker-compose.yml` is for Laravel Sail. `docker-compose-site.yml` is to get the application up and running in production.
+### Test locally with Sail
+- (to be determined)
