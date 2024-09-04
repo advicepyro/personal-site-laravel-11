@@ -30,4 +30,3 @@ WORKDIR /home/nobody/site
 RUN composer install --no-dev
 RUN npm install
 RUN npx mix --production
-RUN php artisan migrate
