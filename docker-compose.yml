@@ -6,3 +6,6 @@ services:
     ports:
       - "80:80"
     restart: unless-stopped
+    volumes:
+      - ./laravel-app:/home/nobody/site
+    command: sh -c "/usr/local/bin/init.sh"

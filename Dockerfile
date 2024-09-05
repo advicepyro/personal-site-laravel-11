@@ -3,6 +3,9 @@ FROM trafex/php-nginx:3.6.0 AS php-nginx
 
 USER root
 
+# Init script
+COPY --chmod=777 init.sh /usr/local/bin/init.sh
+
 # PDO is needed by Laravel. In addition, we need shadow for usermod later on,
 # plus nano since I suck at text editors
 RUN apk add --no-cache php83-pdo php83-pdo_sqlite shadow nano
@@ -23,10 +26,3 @@ RUN usermod -d /home/nobody nobody
 # Back to non-priv user for the rest...
 USER nobody
 COPY --chown=nobody:nobody --chmod=644 container-configs/conf.d /etc/nginx/conf.d
-
-# Compile site assets
-COPY --chown=nobody:nobody laravel-app /home/nobody/site
-WORKDIR /home/nobody/site
-RUN composer install --no-dev
-RUN npm install
-RUN npx mix --production
