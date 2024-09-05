@@ -20,8 +20,10 @@ RUN ln -s /usr/local/lib/node_modules/npm/bin/npx-cli.js /usr/local/bin/npx
 # Create a home directory for nobody - by default it is / which breaks
 # anything that expects a writable home directory, especially npm
 RUN mkdir /home/nobody
+RUN mkdir /home/nobody/site
 RUN chown nobody:nobody /home/nobody
 RUN usermod -d /home/nobody nobody
+VOLUME /home/nobody/site
 
 # Back to non-priv user for the rest...
 USER nobody

@@ -1,5 +1,6 @@
 services:
   site:
+    user: nobody
     build:
       context: .
       dockerfile: ./Dockerfile
